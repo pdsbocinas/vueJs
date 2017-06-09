@@ -1,0 +1,19 @@
+@import '../_variables.scss';
+
+.navbar {
+    min-height: $navbar-min-height;
+    color: $color-navbar;
+    background-color: $bg-navbar;
+    position: relative;
+    z-index: 1;
+    padding: 15px 0;
+    z-index: 100;
+
+    a {
+        color: $navbar-link-color;
+    }
+}
+
+.menu-links {
+	display: block;
+}

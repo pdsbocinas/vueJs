@@ -1,0 +1,70 @@
+
+.page, .content, .Grid {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+.page {
+    flex-direction: column;
+    height: calc(100% - 60px);
+}
+
+.content, .Grid {
+    flex-direction: row;
+    padding-bottom: 15px;
+}
+
+.container-fluid {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.grid-container, .sidebar, .main {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    flex-direction: row;
+}
+
+.main {
+    @media(min-width: 768px) {
+        display: block;
+        flex: none;
+    }
+}
+
+.sidebar + .main {
+    @media (min-width: 768px) {
+        width: 76.27%;
+    }
+
+    @media (min-width: 992px) {
+        width: 81.20%;
+    }
+
+    @media (min-width: 1200px) {
+        width: 84.50%;
+    }
+}
+
+.sidebar-left {
+    @media (min-width: 768px) {
+        width: 23.73%;
+    }
+
+    @media (min-width: 992px) {
+        width: 18.80%;
+    }
+
+    @media (min-width: 1200px) {
+        width: 15.50%;
+    }
+}
+

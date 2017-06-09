@@ -1,0 +1,16 @@
+.title {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: $title-heading;
+    font-style: italic;
+
+    a {
+    	color: $title-link-color;
+
+    	&:hover {
+    		color: $title-link-hover-color;
+    	}
+    }
+}

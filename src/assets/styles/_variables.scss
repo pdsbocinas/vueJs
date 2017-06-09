@@ -1,0 +1,86 @@
+/* */
+
+/* colors */
+$black:                     rgb(0,0,0);
+$grey:						rgb(75,75,75);
+$white:                     rgb(255,255,255);
+
+$cerulean:                  rgb(2,164,211);
+$indigo:					rgb(79,134,197);
+$indigo-corner:				rgb(79,102,190);
+$prussian-blue:				rgb(0,33,71);				// #002147 background
+$midnight:					rgb(0,20,40);				// #001428 dark background
+$midnight-landscape:		rgba(0,20,40,0.85);			// #001428 dark background lanscape
+$midnight-transmition:		rgba(0, 33, 71, 1);
+$blue-charcoal:				rgb(0,10,17);				// #000a11 Very dark background
+$mirage:					rgb(21,29,43);
+
+$sun:                       rgb(251,172,19);
+$christine:					rgb(235, 113, 12);
+$cinnabar:                  rgb(229,83,37);
+$red:                       rgb(255,0,0);
+
+/* Scaffolding */
+$bg-body: $midnight;
+$bg-bottom-sidebar: $midnight;
+$bg-box-transmition: $midnight-transmition;
+
+$text-color: $white;
+$link-color: $white;
+$link-hover-color: $sun;
+$bg-card: $link-color;
+$bg-card-info: $black;
+$bg-card-border-hover: $sun;
+$bg-card-info-hover: $bg-card-border-hover;
+$bg-trigger-color: $christine;
+
+$border-color: $bg-body;
+$bg-reminder: $indigo;
+$bg-reminder-background: $indigo-corner;
+$reminder-box-shadow: $midnight;
+
+$roboto-regular: 'Roboto-Regular', sans-serif;
+$roboto-medium: 'Roboto-Medium', sans-serif;
+$roboto-condensed: 'Roboto-Condensed', sans-serif;
+$roboto-condensed-light: 'Roboto-Condensed-Light', sans-serif;
+
+$img-cdn-prod-url: '//st.qubit.tv/assets/public/qubit/qubit-ar/staging/images' !default;
+$fonts-cdn-prod-url: '//st.qubit.tv/assets/public/qubit/qubit-ar/staging/fonts' !default;
+
+$trigger: $img-cdn-prod-url + '/slider-arrows.png';
+
+$font-family-sans-serif:  	$roboto-regular;
+$font-family-base:        	$font-family-sans-serif;
+$font-family-base-bold:   	$roboto-medium;
+
+$bg-card: $grey;
+$bg-card-info: $black;
+
+$bg-navbar: lighten($bg-body,10%);
+$navbar-min-height: 30px;
+$color-navbar: $text-color;
+$navbar-link-color: $color-navbar;
+
+/* Modal */
+
+$menu-dates-color: $text-color;
+$menu-dates-hover-color: $sun;
+$menu-dates-active-color: $cinnabar;
+
+$bg-modal: $mirage;
+$bg-modal-button: $cinnabar;
+$bg-modal-button-hover: $sun;
+
+/* Player */
+$live-button-color: $red;
+
+/* Channel card */
+$bg-channel-card-hover: $sun;
+$bg-channel-card-active: $cinnabar;
+$channel-card-title: $roboto-medium;
+$channel-card-info-shadow: 1px 1px 1px $black;
+
+/* Grilla de programación */
+$title-heading: $roboto-regular;
+$title-link-color: $sun;
+$title-link-hover-color: $cinnabar;

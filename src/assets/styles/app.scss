@@ -1,0 +1,22 @@
+/*
+ * 
+ */
+
+/* Importo los vendors */
+@import url(//fonts.googleapis.com/icon?family=Material+Icons);
+
+/* Importo las variables y las clases comunes */
+@import './_variables.scss';
+@import './_normalize.scss';
+@import './_scaffolding.scss';
+@import './components/_fonts.scss';
+@import './components/_material-icons.scss';
+
+@import './layout/_page.scss';
+@import './layout/_title.scss';
+@import './layout/_content.scss';
+
+@import './components/_menu-dates.scss';
+@import './components/_player.scss';
+
+

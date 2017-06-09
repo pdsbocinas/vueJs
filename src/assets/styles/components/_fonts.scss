@@ -1,0 +1,113 @@
+/* Fonts */
+
+// Roboto Font Family
+$roboto-url:    '/roboto';
+
+//Roboto Regular
+$font-roboto-regular-eot-url:                           $fonts-cdn-prod-url + $roboto-url + '/roboto-regular.eot';
+$font-roboto-regular-eot-iefix-url:                     $fonts-cdn-prod-url + $roboto-url + '/roboto-regular.eot?#iefix';
+$font-roboto-regular-woff2-url:                         $fonts-cdn-prod-url + $roboto-url + '/roboto-regular.woff2';
+$font-roboto-regular-woff-url:                          $fonts-cdn-prod-url + $roboto-url + '/roboto-regular.woff';
+$font-roboto-regular-ttf-url:                           $fonts-cdn-prod-url + $roboto-url + '/roboto-regular.ttf';
+$font-roboto-regular-svg-url:                           $fonts-cdn-prod-url + $roboto-url + '/roboto-regular.svg#roboto-regular';
+
+@font-face {
+    font-family: 'Roboto-Regular';
+    src: url($font-roboto-regular-eot-url);
+    src: url($font-roboto-regular-eot-iefix-url) format('embedded-opentype'),
+         url($font-roboto-regular-woff2-url) format('woff2'),
+         url($font-roboto-regular-woff-url) format('woff'),
+         url($font-roboto-regular-ttf-url) format('truetype'),
+         url($font-roboto-regular-svg-url) format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+//Roboto Medium
+$font-roboto-medium-eot-url:                            $fonts-cdn-prod-url + $roboto-url + '/roboto-medium.eot';
+$font-roboto-medium-eot-iefix-url:                      $fonts-cdn-prod-url + $roboto-url + '/roboto-medium.eot?#iefix';
+$font-roboto-medium-woff2-url:                          $fonts-cdn-prod-url + $roboto-url + '/roboto-medium.woff2';
+$font-roboto-medium-woff-url:                           $fonts-cdn-prod-url + $roboto-url + '/roboto-medium.woff';
+$font-roboto-medium-ttf-url:                            $fonts-cdn-prod-url + $roboto-url + '/roboto-medium.ttf';
+$font-roboto-medium-svg-url:                            $fonts-cdn-prod-url + $roboto-url + '/roboto-medium.svg#roboto-medium';
+
+@font-face {
+    font-family: 'Roboto-Medium';
+    src: url($font-roboto-medium-eot-url);
+    src: url($font-roboto-medium-eot-iefix-url) format('embedded-opentype'),
+         url($font-roboto-medium-woff2-url) format('woff2'),
+         url($font-roboto-medium-woff-url) format('woff'),
+         url($font-roboto-medium-ttf-url) format('truetype'),
+         url($font-roboto-medium-svg-url) format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+//Roboto Condensed
+$font-roboto-condensed-eot-url:                         $fonts-cdn-prod-url + $roboto-url + '/roboto-condensed.eot';
+$font-roboto-condensed-eot-iefix-url:                   $fonts-cdn-prod-url + $roboto-url + '/roboto-condensed.eot?#iefix';
+$font-roboto-condensed-woff2-url:                       $fonts-cdn-prod-url + $roboto-url + '/roboto-condensed.woff2';
+$font-roboto-condensed-woff-url:                        $fonts-cdn-prod-url + $roboto-url + '/roboto-condensed.woff';
+$font-roboto-condensed-ttf-url:                         $fonts-cdn-prod-url + $roboto-url + '/roboto-condensed.ttf';
+$font-roboto-condensed-svg-url:                         $fonts-cdn-prod-url + $roboto-url + '/roboto-condensed.svg#roboto-condensed';
+
+@font-face {
+    font-family: 'Roboto-Condensed';
+    src: url($font-roboto-condensed-eot-url);
+    src: url($font-roboto-condensed-eot-iefix-url) format('embedded-opentype'),
+         url($font-roboto-condensed-woff2-url) format('woff2'),
+         url($font-roboto-condensed-woff-url) format('woff'),
+         url($font-roboto-condensed-ttf-url) format('truetype'),
+         url($font-roboto-condensed-svg-url) format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+//Roboto Condensed Light
+$font-roboto-condensed-light-woff2-url:                       $fonts-cdn-prod-url + $roboto-url + '/roboto-condensed-light.woff2';
+$font-roboto-condensed-light-woff-url:                        $fonts-cdn-prod-url + $roboto-url + '/roboto-condensed-light.woff';
+$font-roboto-condensed-light-ttf-url:                         $fonts-cdn-prod-url + $roboto-url + '/roboto-condensed-light.ttf';
+
+@font-face {
+    font-family: 'Roboto-Condensed-Light';
+    src: url($font-roboto-condensed-woff2-url) format('woff2'),
+         url($font-roboto-condensed-woff-url) format('woff'),
+         url($font-roboto-condensed-ttf-url) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+//Slick Font
+$font-slick-eot-iefix-url:                      '///cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/fonts/slick.eot?#iefix';
+$font-slick-woff-url:                           '///cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/fonts/slick.woff';
+$font-slick-ttf-url:                            '///cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/fonts/slick.ttf';
+$font-slick-svg-url:                            '///cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/fonts/slick.svg#slick';
+
+@font-face {
+    font-family: "slick";
+    src: url($font-slick-eot-iefix-url) format("embedded-opentype"), 
+        url($font-slick-woff-url) format("woff"), 
+        url($font-slick-ttf-url) format("truetype"), 
+        url($font-slick-svg-url) format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+//Font Awesome
+$font-awesome-eot-url:                          '///cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/fonts/fontawesome-webfont.eot';
+$font-awesome-woff2-url:                        '///cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/fonts/fontawesome-webfont.woff2';
+$font-awesome-woff-url:                         '///cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/fonts/fontawesome-webfont.woff';
+$font-awesome-ttf-url:                          '///cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/fonts/fontawesome-webfont.ttf';
+$font-awesome-svg-url:                          '///cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/fonts/fontawesome-webfont.svg#fontawesome';
+
+@font-face {
+    font-family: 'FontAwesome';
+    src: url($font-awesome-eot-url);
+    src: url($font-awesome-eot-url) format('embedded-opentype'),
+        url($font-awesome-woff2-url) format('woff2'),
+        url($font-awesome-woff-url) format('woff'),
+        url($font-awesome-ttf-url) format('truetype'),
+        url($font-awesome-svg-url) format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

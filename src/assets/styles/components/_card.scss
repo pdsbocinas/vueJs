@@ -1,0 +1,350 @@
+
+@import '../_variables.scss';
+
+.card {
+    align-self: auto;
+    flex-flow: row wrap;
+    width: 100%;
+    margin: 5px 0.5%;
+    position: relative;
+    background-color: rgba($bg-card,0.3);
+    background-repeat: no-repeat;
+    background-position: center 30px;
+    background-size: 45%;
+    border: 2px solid $border-color;
+    border-radius: 8px;
+    opacity: 0;
+    transition: all 0.2s ease;
+    -webkit-animation: fadeIn ease-in 1;
+    -moz-animation: fadeIn ease-in 1;
+    animation: fadeIn ease-in 1;
+
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+
+    -webkit-animation-duration: 0.5s;
+    -moz-animation-duration: 0.5s;
+    animation-duration: 0.5s;
+    
+    &.card-program {
+        background-image: none!important;
+    }
+
+    > div {
+        border-radius: 8px;
+        background-size: initial;
+        background-repeat: no-repeat;
+        background-position: center 30px;
+
+        &.tv-show {
+            background-size: cover;
+            background-position: 0 0;
+        }
+    }
+
+    a {
+        display: block;
+        cursor: pointer;
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+        /* Por default el height del elemento card es 0.
+         * Para que sea responsive y la altura se acomode
+         * a cualquier resolución, tiene que ser proporcional
+         * al ancho del elemento en ese momento. Para lograr
+         * eso, hago el siguiente cálculo:
+         * padding-bottom = (height / width) * 100%
+         * Los datos de altura y ancho los saqué del ilustrator:
+         * height: 165px
+         * width: 200px
+         */
+        padding-bottom: 82.5%;
+    }
+
+    img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+
+    .card-info, .channel-info {
+        position: absolute;
+        bottom: 10px;
+        width: 100%;
+        padding: 10px 5% 15px;
+        color: $text-color;
+        z-index: 9;
+        font-size: 0.875em;
+        text-align: center;
+
+        .card-title {
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+    }
+
+    .card-info {
+
+        .card-title {
+            display: none;
+
+            @media(min-width: 1024px + 1px) {
+                display: block;
+            }
+        }
+    }
+
+    .channel-info {
+        background-color: rgba($bg-card-info,0.6);
+        text-align: left;
+        bottom: 0;
+
+        @media (min-width: 1024px + 1px) {
+            display: none;
+        }
+    }
+
+    /*
+     * El nombre del canal está siempre visible, pero en el caso de los
+     * programas, la info aparece en el rollover.
+     */
+    &.tv-show {
+        background-position: center center;
+        background-size: cover;
+        margin: 5px 0 5px 1%;
+
+        .card-info {
+            background-color: rgba($bg-card-info,0.3);
+            text-align: left;
+            bottom: 0;
+        }
+    }
+
+    /* Para que entren cierta cantidad de elementos dentro de la grilla,
+     * en cada breakpoint le asigno diferentes anchos.
+     * Si el elemento .card es parte de la grilla de programas, le agrego
+     * la clase .tv-show y le vuelvo a definir el ancho, para que
+     * entren la misma cantidad de elementos en ambas grillas.
+     */
+
+    @media (min-width: 320px) {
+        width: 47.55%;
+    }
+
+    @media (min-width: 630px) {
+        width: 31.63%;
+    }
+
+    @media (min-width: 768px) {
+        width: 23.45%;
+
+        &.tv-show {
+            width: 31.60%;
+        }
+    }
+
+    @media (min-width: 992px) {
+        width: 18.5%;
+
+        &.tv-show {
+            width: 23.49%;
+        }
+    }
+
+    @media (min-width: 1200px) {
+        width: 15.33%;
+
+        &.tv-show {
+            width: 18.6%;
+        }
+    }
+
+    /*
+     * Pongo el efecto de zoom en el rollover sólo en resoluciones desktop.
+     */
+    @media (min-width: 1024px + 1px) {
+        &:hover {
+            border-color: $bg-card-border-hover;
+            transform: scale(1.05);
+
+            .card-info, .channel-info {
+                display: block;
+            }
+
+            .channel-info {
+                background-color: rgba($bg-card-info-hover,0.9);
+            }
+        }
+
+        &.tv-show {
+            &:hover {
+                .card-info {
+                    background-color: rgba($bg-card-info-hover,0.9);
+                }
+            }
+        }
+    }
+
+    @for $i from 1 through 100 {
+        &:nth-child(#{$i}) {
+            -webkit-animation-delay:(#{$i*0.05s});
+            animation-delay:(#{$i*0.05s});
+        }
+    }
+
+    &.channel-card {
+        width: 100px;
+        position: relative;
+        margin: 9% auto;
+        text-align: center;
+        border: 0;
+        transition: all 0.1s ease;
+        margin-bottom: 15px;
+        border-radius: 5px;
+        background-color: transparent;
+        border-bottom: 1px solid #ccc;
+
+        @media(min-width: 960px){
+            border-bottom: none;
+        }
+
+        -webkit-animation-duration: 0.1s;
+        -moz-animation-duration: 0.1s;
+        animation-duration: 0.1s;
+
+        .box-image {
+            padding: 3px 19px 0 15px;
+            float: left;
+            position: relative;
+
+            @media(min-width: 960px){
+                padding: 3px 72px 0 15px;
+            }
+
+            @media(min-width: 1200px){
+                padding: 0px 19px 0 66px;
+            }
+
+            @media(min-width: 1366px){
+                padding: 0 56px 0 66px;
+            }
+
+            img {
+                top: 40px;
+                width: 74%;
+            }
+        }
+
+        a {
+            background-color: rgba($bg-card,0.3);
+            padding-bottom: 100%;
+            border-radius: 5px;
+            position: relative;
+
+            .card-info {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+            }
+        }
+
+        &:hover {
+            transform: scale(1);
+            background-color: transparent;
+
+            .channel-card-info {
+                opacity: 1;
+                width: 240px;
+                height: 97%;
+                padding: 10% 10% 10% 110px;
+                @media(min-width: 1200px){
+                    height: 100%;
+                }
+            }
+        }
+
+        &.active {
+            background-color: $bg-channel-card-active;
+        }
+
+        .channel-card-info {
+            opacity: 0;
+            position: absolute;
+            bottom: 0;
+            background-color: rgba($bg-channel-card-hover,.7);
+            height: 100%;
+            width: 100%;
+            -webkit-transition: all .5s ease-in-out;
+            transition: all .5s ease-in-out;
+            border-radius: 5px;
+            z-index: -1;
+            text-align: left;
+            padding: 0 10% 0 0;
+            text-shadow: $channel-card-info-shadow;
+            font-size: 13px;
+
+            @media (min-width: 768px) {
+                font-size: 15px;
+            }
+
+            h4 {
+                font-family: $channel-card-title;
+                margin-top: 3px;
+                margin-bottom: 6px;
+                font-size: 1em;
+
+                @media(min-width: 768px){
+                    margin-bottom: 0px;
+                    font-size: 0.9em;
+                }
+            }
+        }
+    }
+
+    .reminder {
+        background-color: $bg-reminder;
+        width: 25px;
+        height: 35px;
+        position: absolute;
+        top: -7px;
+        right: 11px;
+        box-shadow: 2px 6px 2px rgba($reminder-box-shadow,.8);
+
+        &:before {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            top: 0px;
+            background-color: transparent;
+            width: 0;
+            height: 0;
+            border-left: 5px solid transparent;
+            border-right: 0;
+            border-bottom: 5px solid $bg-reminder-background;
+            left: -5px;
+        }
+
+        &:after {
+            width: 0px;
+            height: 0px;
+            border-left: 13px solid $bg-reminder;
+            border-right: 12px solid $bg-reminder;
+            border-bottom: 15px solid transparent;
+            content: '';
+            position: absolute;
+            bottom: -13px;
+            -webkit-filter: drop-shadow(3px 6px 1px rgba($reminder-box-shadow,.8));
+            -moz-filter: drop-shadow(3px 6px 1px rgba($reminder-box-shadow,.8));
+            -ms-filter: drop-shadow(3px 6px 1px rgba($reminder-box-shadow,.8));
+            -o-filter: drop-shadow(3px 6px 1px rgba($reminder-box-shadow,.8));
+            filter: drop-shadow(3px 6px 1px rgba($reminder-box-shadow,.8));
+        }
+    }
+}
+
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity: 1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity: 1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity: 1; } }

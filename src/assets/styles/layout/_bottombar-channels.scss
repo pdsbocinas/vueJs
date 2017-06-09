@@ -1,0 +1,185 @@
+@import '../_variables.scss';
+
+.page{
+  height: auto;
+}
+
+.vjs-default-skin {
+
+  @media(min-width: 1200px){
+    position: fixed!important;
+  }
+}
+
+.box-transmition {
+    font-size: 20px;
+    padding: 18px 15px 20px;
+    width: 100%;
+    border-bottom: 1px solid #999;
+    background-color: $bg-box-transmition;
+
+    h4 {
+        -webkit-font-smoothing: antialiased;
+        font-family: $roboto-condensed;
+        margin: 0;
+    }
+
+    span {
+        color: #999;
+        font-size: 19px;
+    }
+}
+
+.trigger {
+    background-image: url($trigger);
+    background-color: $bg-trigger-color;
+    width: 25px;
+    height: 61px;
+    background-position: -14px 6px;
+    top: 66px;
+    right: 320px;
+    z-index: 10;
+    position: absolute;
+    background-repeat: no-repeat;
+    display: none;
+
+    @media(min-width: 480px) and (orientation: landscape){
+        display: block;
+    }
+}
+
+.bottombar-container {
+    right: 0px;
+    z-index: 1;
+    top: 0;
+
+    @media(min-width: 480px) and (orientation: landscape){
+        position: fixed;
+        z-index: 100;
+    }
+}
+
+.bottombar-channel{
+    background: $bg-bottom-sidebar;
+    position: relative;
+    height: auto;
+    width: 100vw;
+    padding: 0px;
+    overflow: hidden;
+
+    @media(min-width: 480px) and (orientation: landscape){
+        background: $midnight-landscape;
+        height: 100vh;
+        z-index: 10;
+        width: 320px;
+        overflow-y: scroll;
+    }
+
+    .card {
+        .card-info, .channel-info {
+            width: 7vw;
+        }
+
+        &.channel-card {
+            width: 100%;
+            padding: 27px 0 38px 0;
+            margin: 0;
+            border-bottom: 1px solid #999;
+            border-radius: 0px;
+            height: 105px;
+
+            &.active {
+                background-color: transparent;
+
+                .box-image {
+
+                    .bg-gray {
+                        background-color: $bg-channel-card-active;
+                        opacity: 0.7;
+                    }
+                }
+            }
+
+            .box-image {
+                padding: 3px 0px 0 15px;
+                float: left;
+                position: relative;
+                width: 115px;
+
+                .bg-gray {
+                    background-color: rgba($bg-card,0.3);
+                    border-radius: 6px;
+                    width: 75px;
+                    height: 70px;
+                    position: absolute;
+                    top: -7px;
+                }
+
+
+                img {
+                    position: relative;
+                    top: 4px;
+                    left: -13px;
+                    -webkit-transform: none;
+                    transform: none;
+                    width: 50%;
+                }
+            }
+
+            h4 {
+                margin: 0 0 10px 0;
+                font-size: 17px;
+            }
+
+
+
+            a {
+                background-color: transparent;
+                position: absolute;
+                width: 100%;
+                height: 90px;
+                overflow: hidden;
+                padding-bottom: 0;
+
+                .card-info {
+                    width: 7vw;
+                    padding: 0 0 5% 0;
+                }
+            }
+
+            .channel-card-info-mobile {
+                overflow: hidden;
+                text-align: left;
+                padding-left: 0px;
+                padding-top: 2px;
+                padding-right: 20px;
+
+                span {
+                  color: #999;
+                  font-size: 14px;
+                }
+
+            }
+
+            &:hover {
+                .channel-card-info {
+                    width: 35vw;
+                    padding: 10% 10% 10% 8vw;
+                }
+            }
+        }
+    }
+}
+
+.sidebar-channel,
+.current-channel {
+    position: absolute;
+    z-index: 9999999999;
+    left: -10vw;
+
+    transition-property: left;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+
+
+}
